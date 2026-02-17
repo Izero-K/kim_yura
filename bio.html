@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Юрий Ким · Биография</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: linear-gradient(145deg, #f0f4fa 0%, #d9e2ef 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* главная карточка */
+    .card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 48px 48px 32px 32px;
+      box-shadow: 0 25px 45px -12px rgba(0,20,40,0.35),
+                  inset 0 1px 2px rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.5);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    /* шапка */
+    header {
+      background: linear-gradient(112deg, #1e2b3c 0%, #0f1a26 100%);
+      color: white;
+      padding: 40px 32px 32px 32px;
+      text-align: center;
+      border-bottom: 3px solid #ffe68f;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-top: 10px;
+      font-weight: 300;
+      border-bottom: 1px dashed rgba(255,255,255,0.2);
+      padding-bottom: 15px;
+    }
+
+    /* навигация */
+    nav {
+      background: #233247;
+      padding: 12px 24px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #3d506e;
+    }
+
+    nav a {
+      color: #eaf0ff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      border-bottom-color: #ffdb7c;
+      color: white;
+    }
+
+    /* секция обо мне */
+    #bio {
+      padding: 40px 36px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    #bio h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #102331;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #bio h2::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #a3b8d4, transparent);
+    }
+
+    /* стилизация списка */
+    ul {
+      list-style: none;
+      background: rgba(255,255,255,0.7);
+      border-radius: 36px;
+      padding: 28px 32px;
+      box-shadow: 0 8px 22px rgba(0, 20, 30, 0.1);
+      border: 1px solid rgba(255,255,255,0.7);
+      backdrop-filter: blur(4px);
+    }
+
+    ul li {
+      padding: 16px 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: #01142e;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li b {
+      min-width: 90px;
+      font-weight: 600;
+      color: #102b44;
+      background: rgba(230, 241, 255, 0.9);
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    /* подвал */
+    footer {
+      background: #151f2c;
+      color: #9bb5d4;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      border-top: 2px solid #ffdd99;
+    }
+
+    /* совсем маленькие экраны */
+    @media (max-width: 500px) {
+      header h1 { font-size: 2.4rem; }
+      #bio { padding: 28px 18px; }
+      ul { padding: 16px; }
+      ul li { flex-direction: column; align-items: flex-start; gap: 6px; }
+      ul li b { min-width: auto; }
+    }
+
+    /* лёгкая анимация при наведении на карточку */
+    .card:hover {
+      box-shadow: 0 35px 55px -15px #0b1e30;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>Моя биография</h1>
+      <p>личная страница</p>
+    </header>
+
+    <nav>
+      <a href="#bio">👤 Обо мне</a>
+      <a href="#bio" style="opacity:0.9;">📌 главное</a>
+    </nav>
+
+    <section id="bio">
+      <h2>Обо мне</h2>
+
+      <ul>
+        <li><b>Имя</b> Ким Юрий</li>
+        <li><b>Возраст</b> 18 лет</li>
+        <li><b>Город</b> Алматы</li>
+        <li><b>Учёба</b> колледж Polytech</li>
+        <li><b>О себе</b> Я Юрий, увлекаюсь играми, свободное время провожу за играми и скроллингом интернета. Больше не знаю что о себе рассказать :)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Моя биография — сделано с теплом</p>
+    </footer>
+  </div>
+</body>
+</html>
