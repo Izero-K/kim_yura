@@ -72,6 +72,7 @@
       gap: 24px;
       flex-wrap: wrap;
       border-bottom: 1px solid #3d506e;
+      align-items: center;
     }
 
     nav a {
@@ -87,6 +88,35 @@
     nav a:hover {
       border-bottom-color: #ffdb7c;
       color: white;
+    }
+
+    /* кнопка проекта — стилизована под общую навигацию, но заметнее */
+    .btn {
+      background: #ffdb7c;
+      color: #1e2b3c;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: 0.15s;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,200,0.7);
+      margin-left: auto; /* прижимаем кнопку к правому краю, если есть место */
+    }
+
+    .btn:hover {
+      background: #ffeaa3;
+      transform: scale(1.02);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+      border-color: #fff4c6;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+      background: #e6c56b;
     }
 
     /* секция обо мне */
@@ -167,6 +197,8 @@
       ul { padding: 16px; }
       ul li { flex-direction: column; align-items: flex-start; gap: 6px; }
       ul li b { min-width: auto; }
+      nav { gap: 16px; }
+      .btn { margin-left: 0; } /* на узких экранах кнопка не прижимается вправо */
     }
 
     /* лёгкая анимация при наведении на карточку */
@@ -184,7 +216,9 @@
 
     <nav>
       <a href="#bio">👤 Обо мне</a>
-      <a href="#bio" style="opacity:0.9;">📌 главное</a>
+      
+      <!--  КНОПКА ПРОЕКТА  -->
+      <button class="btn" onclick="window.location.href='job.html'">🚀 Показать мой проект</button>
     </nav>
 
     <section id="bio">
@@ -200,7 +234,7 @@
     </section>
 
     <footer>
-      <p>© 2026 Моя биография — сделано с теплом</p>
+      <p>© 2026 Моя биография</p>
     </footer>
   </div>
 </body>
